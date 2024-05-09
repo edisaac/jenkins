@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  jenkins-agent:
+    image: jenkins/inbound-agent
+    container_name: jenkins-agent
+    environment:
+      - JENKINS_URL=${JENKINS_URL} # URL del servidor Jenkins
+      - JENKINS_AGENT_NAME=${JENKINS_AGENT_NAME} # Nombre del agente Jenkins
+      - JENKINS_SECRET=${JENKINS_SECRET} # Secreto para conectar el agente con el servidor Jenkins
+      - JENKINS_AGENT_WORKDIR=${JENKINS_AGENT_WORKDIR} # Directorio de trabajo del agente Jenkins
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock # Montaje del socket de Docker para permitir la construcción de contenedores Docker dentro del agente
+      - /home/ubuntu/jenkins_agent:${JENKINS_AGENT_WORKDIR} # Directorio de trabajo del agente Jenkins
+    networks:
+      - jenkins-network
+
+networks:
+  jenkins-network:
+    driver: bridge
