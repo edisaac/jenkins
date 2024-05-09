@@ -6,6 +6,10 @@ multipass launch docker --cpus 2 --disk 40G --memory 4G --name slave
 
 
 
+multipass mount $HOME master:/home/edmejia
+
+multipass mount $HOME slave:/home/edmejia
+
 
 
 docker-compose build
