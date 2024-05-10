@@ -1,11 +1,6 @@
-```powershell
-multipass launch docker --cpus 2 --disk 40G --memory 4G --name master
 
-multipass launch docker --cpus 2 --disk 40G --memory 4G --name slave
-```
 
 ```powershell
-multipass set local.privileged-mounts=Yes
 
 multipass mount C:\repos-lau\jenkins master:/jenkins
 multipass mount C:\repos-lau\jenkins slave:/jenkins
@@ -38,7 +33,7 @@ docker-compose -f docker-compose-master.yml up
 
 ### en jenkins
 
-#### 
+#### configuracion agente
 
 Panel de Control> Administrar Jenkins > nodos > new node
 
@@ -47,10 +42,13 @@ labels  : agent1
 Metodo de ejecución:**Launch agent by connecting it to the controller**
 
 
+Panel de Control > nodos > agent1
 
-https://hub.docker.com/r/jenkins/inbound-agent/ 
 
 ### en slave
+ver 
+https://hub.docker.com/r/jenkins/inbound-agent/ 
+
 
 ```powershell
 multipass shell slave
@@ -71,7 +69,7 @@ docker-compose -f docker-compose-slave.yml up
 
 
 
-new item > tipo pipeline > Pipeline script
+root>new item > tipo pipeline > Pipeline script
 
 
 
@@ -85,7 +83,8 @@ pipeline {
             steps {
                 echo 'Hello World'
                	script {
-                    sh 'java --version'
+                    sh 'echo Hola mundo'
+                    //sh 'java --version'
                     //sh 'npm --version'
                 }
             }
