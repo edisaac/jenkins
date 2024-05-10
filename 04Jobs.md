@@ -1,4 +1,5 @@
 
+Instalar JOB DSL PLUGIn
 
 root>new item > tipo pipeline > Pipeline script
 

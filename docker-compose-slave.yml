@@ -3,7 +3,7 @@ version: '3.8'
 services:
   jenkins-agent:
     image: jenkins/inbound-agent
-    container_name: jenkins-agent
+    container_name: jenkins_agent
     environment:
       - JENKINS_URL=${JENKINS_URL} # URL del servidor Jenkins
       - JENKINS_AGENT_NAME=${JENKINS_AGENT_NAME} # Nombre del agente Jenkins

@@ -1,6 +1,7 @@
 
 
 ```powershell
+multipass set local.privileged-mounts=Yes
 
 multipass mount C:\repos-lau\jenkins master:/jenkins
 multipass mount C:\repos-lau\jenkins slave:/jenkins
@@ -20,6 +21,7 @@ en consola de master
 
 ```sh
 mkdir -p /home/ubuntu/jenkins_home
+chown 1000  /home/ubuntu/jenkins_home -R
 cd /jenkins/
 
 docker-compose -f docker-compose-master.yml up 
