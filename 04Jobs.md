@@ -62,3 +62,9 @@ pipeline {
     }
 }
 ```
+
+Para que permita aprobar los DSL directamente
+
+Jenkins> administrar jenkins> seguridad> 
+
+Enable script security for Job DSL scripts: false 
