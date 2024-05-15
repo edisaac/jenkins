@@ -12,9 +12,6 @@ pipelineJob('nodejs 1') {
       scriptPath("jenkinsfile")
     }
   }
-
-	triggers {
-		cron('H/7 * * * *')
-	}
+ 
 	
 }

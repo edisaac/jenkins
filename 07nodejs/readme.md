@@ -24,5 +24,9 @@ luego agregar el contenido
 07.B.nodejsDocker.groovy
 
  
- Crear NodeJS  
- Panel de Control > Administrar Jenkins >Tools
+Crear NodeJS  Tool 
+Panel de Control > Administrar Jenkins >Tools >instalaciones de NodeJS
+
+
+cd /jenkins/07nodejs
+docker-compose -f docker-compose-docker-slave.yml up

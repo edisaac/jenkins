@@ -5,11 +5,10 @@ services:
     build:
       context: dockerjenkins
       dockerfile: Dockerfile
-    container_name: jenkins_master
+    container_name: jenkinsallin
     ports:
       - 8080:8080
       - 50000:50000
-    container_name: jenkins
     privileged: true
     user: root
     volumes:
