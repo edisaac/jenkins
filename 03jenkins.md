@@ -6,7 +6,8 @@ multipass set local.privileged-mounts=Yes
 multipass mount C:\repos-lau\jenkins master:/jenkins
 multipass mount C:\repos-lau\jenkins slave:/jenkins
 
-
+multipass mount ~/Desktop/jenkins master:/jenkins
+multipass mount ~/Desktop/jenkins slave:/jenkins
 ```
 
 ### en master

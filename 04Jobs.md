@@ -32,16 +32,17 @@ pipeline {
 ```
 root>new item > tipo pipeline > Pipeline script
 
-nombre: Cron
-Ejecutar periódicamente: check
-programador: * * * * *
+nombre: Cron JOB
+
 
 ```groovy
 pipeline {
     agent {
         label 'agent1'
     }
-   
+    triggers {
+        cron('* * * * *')
+    }
     stages {
         stage('cronStage') {
             steps {
