@@ -1,0 +1,46 @@
+pipeline {
+    agent any
+    stages {
+        stage('Secuencial') {
+            stages {
+                stage('Secuencial 1') {
+                    steps {
+                        echo "Secuencial: Parte 1"
+                    }
+                }
+                stage('Secuencial 2') {
+                    steps {
+                        echo "Secuencial: Parte 2"
+                    }
+                }
+                stage('Paralelo dentro de secuencial') {
+                    parallel {
+                        stage('Paralelo 1') {
+                            steps {
+                                echo "Paralelo en secuencial: Parte 1>>>>>>"
+                                sh 'sleep 15'
+                                echo "<<<<<<Paralelo en secuencial: Parte 1"
+                            }
+                        }
+                        stage('Paralelo 2') {
+                            steps {
+                                echo "Paralelo en secuencial: Parte 2>>>>>>"
+                                sh 'sleep 5'
+                                echo "<<<<<<Paralelo en secuencial: Parte 2"
+
+                            }
+                        }
+                        stage('Paralelo 3') {
+                            steps {
+                                echo "Paralelo en secuencial: Parte 3>>>>>>"
+                                sh 'sleep 10'
+                                echo "<<<<<<Paralelo en secuencial: Parte 3"
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
