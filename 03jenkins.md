@@ -70,9 +70,15 @@ docker-compose -f docker-compose-slave.yml up
 
 ### probar agente en jenkins
 
-
+root>new item > tipo pipeline > libre
+Build Steps / Ejecutar linea de comandos (shell)
+```shell
+echo Hola mundo
+```
 
 root>new item > tipo pipeline > Pipeline script
+
+
 
 
 
@@ -97,11 +103,5 @@ pipeline {
 ```
 
 
-
-
-
-
-
-https://medium.com/@yjagdale/deploy-jenkins-master-slave-as-docker-container-ea8557d0d52a
 
 

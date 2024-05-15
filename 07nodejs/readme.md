@@ -7,7 +7,7 @@ Crear un seed JOB
 
 Panel de Control>Todo>Nuevo Tarea
 
-name: job dsl 1
+name: job dsl nodeJS
 type: proyecto libre
 
 
@@ -17,13 +17,12 @@ Use the provided DSL script
 
 Agregar el contenido de 
 
-05.A.parametrizado.groovy
+07.A.nodejs.groovy
 
 luego agregar el contenido
 
-05.B.parametrizado.groovy
+07.B.nodejsDocker.groovy
 
-
-Para evitar las aprobaciones
-Panel de Control>Administrar Jenkins>Security
-Enable script security for Job DSL scripts
+ 
+ Crear NodeJS  
+ Panel de Control > Administrar Jenkins >Tools
