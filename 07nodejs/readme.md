@@ -1,4 +1,22 @@
-ver
+Agregar Agente Docker
+
+```powershell
+multipass shell slave
+```
+
+en consola de slave
+
+```shell
+mkdir -p /home/ubuntu/jenkins_agent_docker
+chown 1000  /home/ubuntu/jenkins_agent_docker -R
+
+cd /jenkins/07nodejs
+docker-compose -f docker-compose-docker-slave.yml up
+
+```
+
+
+
 
 https://jenkinsci.github.io/job-dsl-plugin/#
 
@@ -24,9 +42,11 @@ luego agregar el contenido
 07.B.nodejsDocker.groovy
 
  
+
+
+
 Crear NodeJS  Tool 
 Panel de Control > Administrar Jenkins >Tools >instalaciones de NodeJS
 
 
-cd /jenkins/07nodejs
-docker-compose -f docker-compose-docker-slave.yml up
+

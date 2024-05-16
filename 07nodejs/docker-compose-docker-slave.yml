@@ -1,8 +1,8 @@
 version: '3.8'
 
 services:
-  jenkins-agent:
-    image: jenkins/jenkinsdockerslave
+  jenkins-docker:
+    
     build:
       context: dockerslavejenkins
       dockerfile: Dockerfile
@@ -17,7 +17,8 @@ services:
       - JENKINS_AGENT_WORKDIR=${JENKINS_AGENT_WORKDIR} # Directorio de trabajo del agente Jenkins
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock # Montaje del socket de Docker para permitir la construcción de contenedores Docker dentro del agente
-      - /home/ubuntu/jenkins_agent:${JENKINS_AGENT_WORKDIR} # Directorio de trabajo del agente Jenkins
+      - /home/ubuntu/jenkins_agent_docker:${JENKINS_AGENT_WORKDIR} # Directorio de trabajo del agente Jenkins
+      #- /home/ubuntu/jenkins_agent_var:/var/jenkins
     networks:
       - jenkins-network
 

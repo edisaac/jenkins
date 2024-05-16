@@ -61,6 +61,10 @@ en consola de slave
 
 ```
 mkdir -p /home/ubuntu/jenkins_agent
+
+chown 1000  /home/ubuntu/jenkins_agent -R
+
+
 cd /jenkins/
 
 docker-compose -f docker-compose-slave.yml up 

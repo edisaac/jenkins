@@ -13,8 +13,5 @@ pipelineJob('nodejs 2 docker') {
     }
   }
 
-	triggers {
-		cron('H/7 * * * *')
-	}
 	
 }
