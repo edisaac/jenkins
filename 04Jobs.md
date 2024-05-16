@@ -1,5 +1,7 @@
 
-Instalar JOB DSL PLUGIn
+
+# JOB
+## Crear un  JOB
 
 root>new item > tipo pipeline > Pipeline script
 
@@ -29,7 +31,10 @@ pipeline {
         }
     }
 }
+
 ```
+
+## Crear cron  JOB
 root>new item > tipo pipeline > Pipeline script
 
 nombre: Cron JOB
@@ -64,8 +69,3 @@ pipeline {
 }
 ```
 
-Para que permita aprobar los DSL directamente
-
-Jenkins> administrar jenkins> seguridad> 
-
-Enable script security for Job DSL scripts: false 

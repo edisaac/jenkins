@@ -1,9 +1,15 @@
-ver
+# Instalar PLUGIns
+Pipeline Stage View 
+Job DSL 
+NodeJS
+Docker Pipeline
+
 
 https://jenkinsci.github.io/job-dsl-plugin/#
 
+# JOB DSL
 
-Crear un seed JOB
+## Crear un seed JOB
 
 Panel de Control>Todo>Nuevo Tarea
 
@@ -24,6 +30,7 @@ luego agregar el contenido
 05.B.parametrizado.groovy
 
 
-Para evitar las aprobaciones
-Panel de Control>Administrar Jenkins>Security
-Enable script security for Job DSL scripts
+
+## Para que permita aprobar los DSL directamente
+Jenkins> administrar jenkins> seguridad> 
+Enable script security for Job DSL scripts: false 

@@ -1,4 +1,4 @@
-# Instalación y Pasos
+# Instalación y Pasos Multipass
 
 Antes de instalar verificar que la red este conectada de manera privada, que los firewall esten desactivados
 

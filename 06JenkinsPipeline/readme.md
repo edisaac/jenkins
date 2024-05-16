@@ -1,1 +1,3 @@
+VER
+
 https://www.jenkins.io/doc/book/pipeline/syntax/

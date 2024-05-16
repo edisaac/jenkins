@@ -1,15 +1,4 @@
 
-
-```powershell
-multipass set local.privileged-mounts=Yes
-
-multipass mount C:\repos-lau\jenkins master:/jenkins
-multipass mount C:\repos-lau\jenkins slave:/jenkins
-
-multipass mount ~/Desktop/jenkins master:/jenkins
-multipass mount ~/Desktop/jenkins slave:/jenkins
-```
-
 ### en master
 
 En power shell
@@ -28,9 +17,8 @@ cd /jenkins/
 docker-compose -f docker-compose-master.yml up 
 ```
 
- docker exec -ti --user root  jenkins_master bash
-
- cd /var/jenkins_home/secrets/
+docker exec -ti --user root  jenkins_master bash
+cd /var/jenkins_home/secrets/
 
 
 
