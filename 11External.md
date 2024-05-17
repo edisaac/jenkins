@@ -1,28 +1,27 @@
-ssh-keygen -t ed25519 -C "edisaac.mejia@gmail.com"   
 
-Instalar ngrok  en el master
+# Instalar ngrok  en el master
 
 https://ngrok.com/
 
-
-En la cuenta de github agregar una nueva aplicacion
-
-https://github.com/settings/apps
-
-
-Colocar la ruta de ngrok en el webhook de la aplicacion de github
  
+y seguir los pasos para levantar el servidor de ngrok apuntando al puerto 8080
+
+# en un pipeline multibranch
+
+En el pipeline de multibranch de ejemplo 
+modificar para que se lanze por webhooks
+Scan Multibranch Pipeline Triggers: Scan by webhook
+agregar un token para que identique el webhook
+
+# en github ir al repositorio multibranch
+
+https://github.com/edisaac/multibranchpipeline/settings/hooks
+
+agregar un webhook con la url de ngrok
 
 
-https://${JENKINS_NGROK}/jenkins/github-webhook/
+https://c378-38-25-25-94.ngrok-free.app/multibranch-webhook-trigger/invoke?token=multibranch-token
 
-Descargar el certificado de la aplicacion de github y transformarlo al que necesita jenkins
 
-openssl pkcs8 -topk8 -nocrypt -in jenkisedisaac.2024-05-17.private-key.pem
+verificar en Recent Deliveries que se haya recibido el ping
 
-Configurar 
-
-Panel de Control >Administrar Jenkins>System
-
-GitHub > GitHub Servers
-Name: 
