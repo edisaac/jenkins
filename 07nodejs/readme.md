@@ -16,9 +16,12 @@ docker-compose -f docker-compose-docker-slave.yml up
 ```
 
 
-
-
+Links
 https://jenkinsci.github.io/job-dsl-plugin/#
+
+
+Crear NodeJS  Tool 
+Panel de Control > Administrar Jenkins >Tools >instalaciones de NodeJS
 
 
 Crear un seed JOB
@@ -42,11 +45,6 @@ luego agregar el contenido
 07.B.nodejsDocker.groovy
 
  
-
-
-
-Crear NodeJS  Tool 
-Panel de Control > Administrar Jenkins >Tools >instalaciones de NodeJS
 
 
 
