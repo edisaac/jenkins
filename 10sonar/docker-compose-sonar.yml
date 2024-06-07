@@ -23,6 +23,22 @@ services:
       SONARQUBE_JDBC_URL: "jdbc:postgresql://postgres:5432/sonar"
     depends_on: 
       - postgres
-
+  jenkins:
+    #image: jenkins/docker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jenkinsallin
+    ports:
+      - 8080:8080
+      - 50000:50000
+    privileged: true
+    user: root
+    volumes:
+      - /home/edmejia/jenkins_home:/var/jenkins_home 
+      - /var/run/docker.sock:/var/run/docker.sock
+      #- //var/run/docker.sock:/var/run/docker.sock  # EN WINDOWS
+    networks:
+      - net
 networks:
   net:

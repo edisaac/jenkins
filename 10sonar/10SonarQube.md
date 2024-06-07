@@ -6,7 +6,7 @@ en master
 
 cd /jenkins/10sonar
 
-docker-compose -f docker-compose-sonar.yml up 
+docker-compose -f docker-compose-sonar.yml up  --build
 
 
 entrar a my account /security 

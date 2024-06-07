@@ -1,5 +1,6 @@
 FROM jenkins/jenkins
 USER root
+#INSTALANDO DOCKER
 RUN apt-get update && \
     apt-get -y install apt-transport-https \
     ca-certificates \
@@ -15,6 +16,7 @@ RUN apt-get update && \
     apt-get -y install docker-ce
 RUN apt-get install -y docker-ce
 RUN usermod -a -G docker jenkins
+#INSTALANDO KUSTOMIZE
 RUN curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
 RUN mv kustomize /usr/local/bin/
 RUN git config --global user.name "jenkins"
