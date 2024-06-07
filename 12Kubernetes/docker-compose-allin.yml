@@ -1,9 +1,9 @@
 version: '3'
 services:
   jenkins:
-    image: jenkins/docker
+    #image: jenkins/docker
     build:
-      context: dockerjenkins
+      context: .
       dockerfile: Dockerfile
     container_name: jenkinsallin
     ports:
@@ -12,8 +12,9 @@ services:
     privileged: true
     user: root
     volumes:
-      - /home/ubuntu/jenkins_home:/var/jenkins_home 
+      - /home/edmejia/jenkins_home:/var/jenkins_home 
       - /var/run/docker.sock:/var/run/docker.sock
+      #- //var/run/docker.sock:/var/run/docker.sock
     networks:
       - net
 networks:
